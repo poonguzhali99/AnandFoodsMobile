@@ -1,0 +1,130 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.anandfoods"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="30" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/debug/AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:4:22-64
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->[com.facebook.flipper:flipper:0.99.0] /Users/srinivasansekar/.gradle/caches/transforms-3/df7b208c45426f45016d16c0c3a6a059/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:5-76
+13-->[com.facebook.flipper:flipper:0.99.0] /Users/srinivasansekar/.gradle/caches/transforms-3/df7b208c45426f45016d16c0c3a6a059/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:22-73
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required to access Google Play Licensing -->
+14-->[:react-native-community_netinfo] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
+14-->[:react-native-community_netinfo] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-76
+15    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+15-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-73
+15-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-70
+16    <!--
+17         Required to keep CPU alive while downloading files
+18        (NOT to keep screen awake)
+19    -->
+20    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required to read and write the expansion files on shared storage -->
+20-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:5-68
+20-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:22-65
+21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Required to read and write the expansion files on shared storage for Android 11 -->
+21-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:5-81
+21-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:22-78
+22    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Required to to download files without a notification -->
+22-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:5-80
+22-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:22-77
+23    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+23-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:5-88
+23-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:22-85
+24    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+24-->[com.google.android.gms:play-services-iid:17.0.0] /Users/srinivasansekar/.gradle/caches/transforms-3/e6d8a0d5c74803b1cab3752897736947/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:5-82
+24-->[com.google.android.gms:play-services-iid:17.0.0] /Users/srinivasansekar/.gradle/caches/transforms-3/e6d8a0d5c74803b1cab3752897736947/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:22-79
+25    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+25-->[com.android.installreferrer:installreferrer:1.1.2] /Users/srinivasansekar/.gradle/caches/transforms-3/aa8b66c6e700288f91862b6c68209a14/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:5-110
+25-->[com.android.installreferrer:installreferrer:1.1.2] /Users/srinivasansekar/.gradle/caches/transforms-3/aa8b66c6e700288f91862b6c68209a14/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:22-107
+26
+27    <application
+27-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:6:5-24:19
+28        android:name="com.anandfoods.MainApplication"
+28-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:7:7-38
+29        android:allowBackup="false"
+29-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:11:7-34
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.5.0] /Users/srinivasansekar/.gradle/caches/transforms-3/540dbfb90b248d7b59cd154497c15f99/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+31        android:debuggable="true"
+32        android:icon="@mipmap/ic_launcher"
+32-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:9:7-41
+33        android:label="@string/app_name"
+33-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:8:7-39
+34        android:roundIcon="@mipmap/ic_launcher_round"
+34-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:10:7-52
+35        android:theme="@style/AppTheme"
+35-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:12:7-38
+36        android:usesCleartextTraffic="true" >
+36-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/debug/AndroidManifest.xml:8:9-44
+37        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+37-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/debug/AndroidManifest.xml:11:9-86
+37-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/debug/AndroidManifest.xml:11:19-83
+38        <activity
+38-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:13:7-23:18
+39            android:name="com.anandfoods.MainActivity"
+39-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:14:9-37
+40            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+40-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:16:9-86
+41            android:label="@string/app_name"
+41-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:15:9-41
+42            android:launchMode="singleTask"
+42-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:17:9-40
+43            android:windowSoftInputMode="adjustResize" >
+43-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:18:9-51
+44            <intent-filter>
+44-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:19:9-22:25
+45                <action android:name="android.intent.action.MAIN" />
+45-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:20:13-65
+45-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:20:21-62
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:21:13-73
+47-->/Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/android/app/src/main/AndroidManifest.xml:21:23-70
+48            </intent-filter>
+49        </activity>
+50
+51        <provider
+51-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:40:9-48:20
+52            android:name="com.ReactNativeBlobUtil.Utils.FileProvider"
+52-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:41:13-70
+53            android:authorities="com.anandfoods.provider"
+53-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-60
+54            android:exported="false"
+54-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:43:13-37
+55            android:grantUriPermissions="true" >
+55-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:44:13-47
+56            <meta-data
+56-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:45:13-47:58
+57                android:name="android.support.FILE_PROVIDER_PATHS"
+57-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:46:17-67
+58                android:resource="@xml/provider_paths" />
+58-->[:react-native-blob-util] /Users/srinivasansekar/Documents/React-Native/git/anandfoosmobile/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:47:17-55
+59        </provider>
+60
+61        <activity
+61-->[com.google.android.gms:play-services-base:17.0.0] /Users/srinivasansekar/.gradle/caches/transforms-3/197aafdaca714ffb9edd95fe82ca0ad4/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+62            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+62-->[com.google.android.gms:play-services-base:17.0.0] /Users/srinivasansekar/.gradle/caches/transforms-3/197aafdaca714ffb9edd95fe82ca0ad4/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+63            android:exported="false"
+63-->[com.google.android.gms:play-services-base:17.0.0] /Users/srinivasansekar/.gradle/caches/transforms-3/197aafdaca714ffb9edd95fe82ca0ad4/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+64            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+64-->[com.google.android.gms:play-services-base:17.0.0] /Users/srinivasansekar/.gradle/caches/transforms-3/197aafdaca714ffb9edd95fe82ca0ad4/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+65
+66        <meta-data
+66-->[com.google.android.gms:play-services-basement:17.0.0] /Users/srinivasansekar/.gradle/caches/transforms-3/0e3d0c4f5635e0c3c0cfa0e0064e8f7e/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+67            android:name="com.google.android.gms.version"
+67-->[com.google.android.gms:play-services-basement:17.0.0] /Users/srinivasansekar/.gradle/caches/transforms-3/0e3d0c4f5635e0c3c0cfa0e0064e8f7e/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+68            android:value="@integer/google_play_services_version" />
+68-->[com.google.android.gms:play-services-basement:17.0.0] /Users/srinivasansekar/.gradle/caches/transforms-3/0e3d0c4f5635e0c3c0cfa0e0064e8f7e/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+69    </application>
+70
+71</manifest>

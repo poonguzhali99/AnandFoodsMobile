@@ -1,0 +1,6 @@
+module Pods_anandfoods_anandfoodsTests {
+  umbrella header "Pods-anandfoods-anandfoodsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
