@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Alert, BackHandler, View, AppState, StatusBar } from 'react-native';
+import { Alert, BackHandler, View, AppState, StatusBar, TouchableOpacity } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 // import NetInfo, { useNetInfo } from '@react-native-community/netinfo';
 import { useIsConnected } from 'react-native-offline';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 // Pages
 import Login from './pages/public/Login';
@@ -155,7 +156,22 @@ const App = () => {
 							<Drawer.Screen name="Log Out" component={() => dispatch(logOut())} />
 						</Drawer.Navigator> */}
 						<Stack.Navigator>
-							<Stack.Screen name="Dashboard" component={Dashboard} />
+							<Stack.Screen
+								name="Dashboard"
+								component={Dashboard}
+								options={{
+									headerRight: () => (
+										<TouchableOpacity onPress={() => dispatch(logOut())}>
+											<FontAwesome
+												name="sign-out"
+												color={colors.darkGrey}
+												size={25}
+												style={{ marginRight: 5 }}
+											/>
+										</TouchableOpacity>
+									)
+								}}
+							/>
 							<Stack.Screen name="Forms" component={Forms} />
 						</Stack.Navigator>
 					</View>

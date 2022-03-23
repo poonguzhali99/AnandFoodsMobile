@@ -22,57 +22,56 @@ import { colors, viewportHeight, viewportWidth } from '../../../utils/config';
 import { labReport } from '../../../utils/sampleJSON';
 import API_CALL from '../../../services';
 import Loader from '../../../components/Loader';
+import { toast } from '../../../utils/common-actions';
 
 const Forms = ({ navigation, route }) => {
 	const [ noteVisible, setNoteVisible ] = useState(false),
+		[ labReportChecklist, setlabReportChecklist ] = useState(labReport),
 		[ loader, setLoader ] = useState(false);
 	let initval = {};
-	labReport.map(({ refference_name }) => {
-		initval[refference_name] = '';
+	labReport.map((report) => {
+		initval[report.refference_name] = '';
+		report.noteVisible = false;
 	});
-	console.log('initval', initval);
 	return (
 		<SafeAreaView style={{ flex: 1, backgroundColor: colors.white }}>
 			<Loader show={loader} />
-			{/* <Empty /> */}
+			{/* <TouchableOpacity onPress={() => setNoteVisible(!noteVisible)}>
+				<CustomText>Press</CustomText>
+			</TouchableOpacity> */}
 			<KeyboardAvoidingView style={{ padding: 10 }}>
-				{/* <CustomText bold medium underline>
-					Daily Laboratory Report
-				</CustomText> */}
-				{/* <View style={{ height: viewportHeight * 0.75 }}> */}
 				<Formik
 					initialValues={initval}
 					validate={(values) => {
 						let errors = {};
 						for (const [ key, value ] of Object.entries(values)) {
-							// console.log(`${key}: ${value}`);
 							if (!value) errors[key] = 'Required';
 						}
-						// for (let val of values) {
-						// 	if (!val[refference_name]) errors[refference_name] = 'Required';
-						// }
-						console.log('Errors', errors);
 						return errors;
 					}}
 					onSubmit={(values) => {
 						console.log(values);
 						let payload = Object.assign({}, values);
-						// payload.ref_name = 0;
 						setLoader(true);
 						API_CALL({
 							method: 'post',
 							url: 'AddLabChemist',
 							data: payload,
 							callback: async ({ status, data }) => {
-								setLoader(false);
-								// if (status == 200) setCheckList(data);
+								if (status == 200) {
+									setLoader(false);
+									if (data.SuccessCode) {
+										toast(data.SuccessMessage);
+										navigation.navigate('Dashboard');
+									} else toast(data.ErrorMeaaage);
+								}
 							}
 						});
 					}}
 				>
 					{({ values, handleSubmit }) => (
 						<FlatList
-							data={labReport}
+							data={labReportChecklist}
 							keyExtractor={(item) => item.refference_name}
 							showsVerticalScrollIndicator={false}
 							ListFooterComponent={
@@ -87,8 +86,6 @@ const Forms = ({ navigation, route }) => {
 								return (
 									<View
 										style={{
-											// justifyContent: 'space-between',
-											// alignItems: 'center',
 											padding: 15,
 											borderRadius: 8,
 											borderWidth: 1,
@@ -97,11 +94,9 @@ const Forms = ({ navigation, route }) => {
 										}}
 									>
 										<CustomText bold>{item.name}</CustomText>
-										{/* <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-										
-											<FormField /> */}
-										{/* </View> */}
-
+										<CustomText muted bold style={{ marginTop: 5 }}>
+											[ {item.standardValue} ]
+										</CustomText>
 										<FormField
 											type="text-area"
 											name={item.refference_name}
@@ -109,19 +104,46 @@ const Forms = ({ navigation, route }) => {
 										/>
 										<View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
 											<TouchableOpacity
-											// onPress={() => setNoteVisible(true)}
+												onPress={() => {
+													labReportChecklist.map((report) => {
+														if (report.refference_name == item.refference_name) {
+															report.noteVisible = true;
+														} else report.noteVisible = false;
+														// return report;
+													});
+													// console.log('labReportChecklist', labReportChecklist);
+													setlabReportChecklist(labReportChecklist);
+												}}
 											>
 												<CustomText small muted>
 													Add note...
 												</CustomText>
 											</TouchableOpacity>
+											{/* {console.log(
+												'Welcome',
+												labReportChecklist,
+												labReportChecklist.filter(
+													(check) => check.refference_name == item.refference_name
+												)[0].noteVisible
+											)} */}
 											<Modal
-												isVisible={noteVisible}
+												isVisible={
+													labReportChecklist.filter(
+														(check) => check.refference_name == item.refference_name
+													)[0].noteVisible
+												}
+												// isVisible={noteVisible}
 												animationIn="slideInUp"
 												animationOut="slideOutDown"
-												onBackdropPress={() => setNoteVisible(false)}
+												// onBackdropPress={() => setNoteVisible(false)}
 											>
-												<View style={{ flex: 1, justifyContent: 'flex-end' }}>
+												<View
+													style={{
+														flex: 1,
+														justifyContent: 'flex-end',
+														backgroundColor: colors.translucent
+													}}
+												>
 													<View
 														style={{
 															backgroundColor: colors.white,
@@ -142,7 +164,7 @@ const Forms = ({ navigation, route }) => {
 																style={{ flexDirection: 'row', alignItems: 'center' }}
 															>
 																<TouchableOpacity
-																	onPress={() => setNoteVisible(!noteVisible)}
+																// onPress={() => setNoteVisible(!noteVisible)}
 																>
 																	<AntDesign
 																		name="close"

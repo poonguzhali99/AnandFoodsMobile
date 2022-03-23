@@ -7,5 +7,5 @@ export const toast = (message, title, type) => {
 	// 	return (type == 'ios' || type == null) && ToastAndroid.show(message, ToastAndroid.LONG);
 	// else if (Platform.OS == 'ios')
 	// return (type == 'android' || type == null) && Alert.alert(title, message, [ { text: 'OK', onPress: () => {} } ]);
-	return Alert.alert('St.Andrews School', `   ${message}`, [ { text: 'OK', onPress: () => {} } ]);
+	return Alert.alert('Anand food Products', `   ${message}`, [ { text: 'OK', onPress: () => {} } ]);
 };
